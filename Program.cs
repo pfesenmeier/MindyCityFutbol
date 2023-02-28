@@ -11,6 +11,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+
+builder.Configuration.AddEnvironmentVariables(prefix: "POSTGRESQLCONNSTR_");
 builder.Services.AddDbContext<MindyCityFutbolContext>(options => options.UseNpgsql(builder.Configuration.GetConnectionString("MindyCityFutbolContext") ?? throw new InvalidOperationException("Connection String 'MindyCityFutbolContext' not found")));
 
 
