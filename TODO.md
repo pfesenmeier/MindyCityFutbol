@@ -14,3 +14,4 @@ List:
 Added Postgres to dependencies
   - Add Microsoft.EntityFrameworkCore.Design package for migration createion (I think)
   - Add Npgsql.EntityFrameworkCore.PostgreSQL pckg
+  - scaffold context using `dotnet ef dbcontext scaffold`
